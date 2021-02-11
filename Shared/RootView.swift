@@ -33,13 +33,15 @@ struct ContentView: View {
 					  }
 				}
 				.background(Color.blue)
-				
-				Button("Show Detail") {
+				.padding()
+								
+				Button("Add log") {
 					showingDetail.toggle()
 				}
 				.sheet(isPresented: $showingDetail) {
 					DetailView()
 				}
+				
 			}
 			.padding()
 			.navigationBarTitle("Sleep Karma ✨")

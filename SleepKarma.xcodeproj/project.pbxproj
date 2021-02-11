@@ -68,9 +68,9 @@
 			children = (
 				7B12DABC25D5B5AC00E1F955 /* SleepKarmaApp.swift */,
 				7B12DABD25D5B5AC00E1F955 /* RootView.swift */,
+				7BC61C9C25D5C3DE0084CD09 /* DetailView.swift */,
 				7B1D41B325D5D10900D5A79E /* NightRow.swift */,
 				7B1D41AE25D5D06F00D5A79E /* Night.swift */,
-				7BC61C9C25D5C3DE0084CD09 /* DetailView.swift */,
 				7B12DABE25D5B5AC00E1F955 /* Assets.xcassets */,
 			);
 			path = Shared;
