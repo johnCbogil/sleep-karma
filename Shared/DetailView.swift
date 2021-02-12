@@ -12,7 +12,7 @@ struct DetailView: View {
 	@State var targetWakeUpTime = Date()
 	@State var bedTime = Date()
 	@State var fellAsleepTime = Date()
-	@State var awakeNightTime = String()
+	@State var awakeNightTime = "0"
 	@State var wakeUpTime = Date()
 	@State var outOfBedTime = Date()
 	
@@ -52,15 +52,17 @@ struct DetailView: View {
 					displayedComponents: [.hourAndMinute]
 				)
 				.padding()
-//				DatePicker(
-//					"How long you spent awake in the middle of the night",
-//					selection: $awakeNightTime,
-//					displayedComponents: [.hourAndMinute]
-//				)
-				TextField("Amount", text: $awakeNightTime)
-					.keyboardType(.decimalPad)
-					.padding()
-				.padding()
+				HStack() {
+					Text("Time spent awake in middle of night (minutes)")
+						.padding()
+					
+					TextField("\(awakeNightTime)", text: $awakeNightTime)
+						.padding()
+						.keyboardType(.decimalPad)
+						.textFieldStyle(RoundedBorderTextFieldStyle())
+						.multilineTextAlignment(.trailing)
+						.frame(maxWidth: 100)
+				}
 				DatePicker(
 					"When you woke up",
 					selection: $wakeUpTime,
@@ -75,7 +77,6 @@ struct DetailView: View {
 				.padding()
 				
 				Spacer()
-				
 				Button("Save log") {
 
 					createNight()
@@ -103,8 +104,8 @@ struct DetailView: View {
 	}
 }
 
-//struct DetailView_Previews: PreviewProvider {
-//	static var previews: some View {
-//		DetailView()
-//	}
-//}
+struct DetailView_Previews: PreviewProvider {
+	static var previews: some View {
+		DetailView(userSettings: ViewModel())
+	}
+}
