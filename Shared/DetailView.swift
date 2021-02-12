@@ -65,7 +65,7 @@ struct DetailView: View {
 					presentationMode.wrappedValue.dismiss()
 				}
 			}
-			.navigationBarTitle("Add Log 📖")
+			.navigationBarTitle("Add new log 📖")
 		}
 	}
 }
