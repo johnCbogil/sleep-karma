@@ -12,15 +12,15 @@ struct NightRow: View {
 
 	var body: some View {
 		HStack {
-			Text(night.name)
+			Text(verbatim: night.date.toString(format: "EEEE, MMMM d, yyyy"))
 			Spacer()
 		}.padding()
 	}
 }
 
-struct LandmarkRow_Previews: PreviewProvider {
-	static var previews: some View {
-		NightRow(night: Night(name: "test"))
-	.previewLayout(.fixed(width: 300, height: 70))
-	}
-}
+//struct LandmarkRow_Previews: PreviewProvider {
+//	static var previews: some View {
+//		NightRow(night: Night(name: "test"))
+//	.previewLayout(.fixed(width: 300, height: 70))
+//	}
+//}

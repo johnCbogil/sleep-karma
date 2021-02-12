@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
 	@State private var showingDetail = false
-	@ObservedObject var userSettings = UserSettings()
+	@ObservedObject var viewModel = ViewModel()
 	
 	var body: some View {
 		NavigationView {
 			VStack {
-				Text("85%")
+				Text("\(viewModel.sleepEfficiencyScore)%")
 					.font(.largeTitle)
 				
 				Text("Sleep efficiency for last 7 nights")
@@ -23,13 +23,13 @@ struct ContentView: View {
 				Spacer()
 				
 				VStack(alignment: .leading) {
-					Text("Logs")
-						.font(.title)
+					Text("Sleep Logs")
+						.font(.title2)
 						.foregroundColor(.primary)
-						.padding()
+						.padding(10)
 
 					List {
-						ForEach(userSettings.nights, id: \.self) { night in
+						ForEach(viewModel.nights.reversed(), id: \.self) { night in
 							NightRow(night: night)
 						}
 						.onDelete(perform: delete)
@@ -42,7 +42,7 @@ struct ContentView: View {
 					showingDetail.toggle()
 				}
 				.sheet(isPresented: $showingDetail) {
-					DetailView(userSettings: userSettings)
+					DetailView(userSettings: viewModel)
 				}
 				
 			}
@@ -53,7 +53,9 @@ struct ContentView: View {
 	}
 	
 	func delete(at offsets: IndexSet) {
-		userSettings.nights.remove(atOffsets: offsets)
+		var oldNights = viewModel.nights
+		oldNights.remove(atOffsets: offsets)
+		viewModel.nights = oldNights
 	}
 }
 

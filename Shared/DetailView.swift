@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct DetailView: View {
-	@State private var date = Date()
+	@State var targetSleepTime = Date()
+	@State var targetWakeUpTime = Date()
+	@State var bedTime = Date()
+	@State var fellAsleepTime = Date()
+	@State var awakeNightTime = String()
+	@State var wakeUpTime = Date()
+	@State var outOfBedTime = Date()
+	
 	@Environment(\.presentationMode) var presentationMode
-	@ObservedObject var userSettings: UserSettings
+	@ObservedObject var viewModel: ViewModel
 
-	init(userSettings: UserSettings) {
-		self.userSettings = userSettings
+	init(userSettings: ViewModel) {
+		self.viewModel = userSettings
 	}
 
 	var body: some View {
@@ -23,43 +30,46 @@ struct DetailView: View {
 
 				DatePicker(
 					"Target sleep time",
-					selection: $date,
+					selection: $targetSleepTime,
 					displayedComponents: [.hourAndMinute]
 				)
 				.padding()
 				DatePicker(
 					"Target wake up time",
-					selection: $date,
+					selection: $targetWakeUpTime,
 					displayedComponents: [.hourAndMinute]
 				)
 				.padding()
 				DatePicker(
 					"When you went to bed",
-					selection: $date,
+					selection: $bedTime,
 					displayedComponents: [.hourAndMinute]
 				)
 				.padding()
 				DatePicker(
 					"When you fell asleep",
-					selection: $date,
+					selection: $fellAsleepTime,
 					displayedComponents: [.hourAndMinute]
 				)
 				.padding()
-				DatePicker(
-					"How long you spent awake in the middle of the night",
-					selection: $date,
-					displayedComponents: [.hourAndMinute]
-				)
+//				DatePicker(
+//					"How long you spent awake in the middle of the night",
+//					selection: $awakeNightTime,
+//					displayedComponents: [.hourAndMinute]
+//				)
+				TextField("Amount", text: $awakeNightTime)
+					.keyboardType(.decimalPad)
+					.padding()
 				.padding()
 				DatePicker(
 					"When you woke up",
-					selection: $date,
+					selection: $wakeUpTime,
 					displayedComponents: [.hourAndMinute]
 				)
 				.padding()
 				DatePicker(
 					"When you got out of bed",
-					selection: $date,
+					selection: $outOfBedTime,
 					displayedComponents: [.hourAndMinute]
 				)
 				.padding()
@@ -67,17 +77,29 @@ struct DetailView: View {
 				Spacer()
 				
 				Button("Save log") {
-					
-					let newLog = Night(name: "bless123")
-					var oldLogs = userSettings.nights
-					oldLogs.append(newLog)
-					userSettings.nights = oldLogs
-					
+
+					createNight()
+						
 					presentationMode.wrappedValue.dismiss()
 				}
 			}
 			.navigationBarTitle("Add new log 📖")
 		}
+	}
+	
+	private func createNight() {
+		let night = Night(
+			targetSleepTime: targetSleepTime,
+			targetWakeUpTime: targetWakeUpTime,
+			bedTime: bedTime,
+			fellAsleepTime: fellAsleepTime,
+			awakeNightTime: awakeNightTime,
+			wakeUpTime: wakeUpTime,
+			outOfBedTime: outOfBedTime)
+		
+		var oldNights = viewModel.nights
+		oldNights.append(night)
+		viewModel.nights = oldNights
 	}
 }
 
