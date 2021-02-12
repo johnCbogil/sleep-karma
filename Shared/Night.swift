@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Night {
+struct Night: Codable, Hashable {
 	let name: String
 }

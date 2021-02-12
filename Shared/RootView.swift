@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  RootView.swift
 //  Shared
 //
 //  Created by John Bogil on 2/11/21.
@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 	@State private var showingDetail = false
-	private let nights = [Night(name: "test123")]
+	@ObservedObject var userSettings = UserSettings()
 	
 	var body: some View {
 		NavigationView {
@@ -28,9 +28,12 @@ struct ContentView: View {
 						.foregroundColor(.primary)
 						.padding()
 
-					List(nights, id: \.name) { night in
-						  NightRow(night: night)
-					  }
+					List {
+						ForEach(userSettings.nights, id: \.self) { night in
+							NightRow(night: night)
+						}
+						.onDelete(perform: delete)
+					}
 				}
 				.background(Color.blue)
 				.padding()
@@ -39,13 +42,18 @@ struct ContentView: View {
 					showingDetail.toggle()
 				}
 				.sheet(isPresented: $showingDetail) {
-					DetailView()
+					DetailView(userSettings: userSettings)
 				}
 				
 			}
 			.padding()
-			.navigationBarTitle("Sleep Karma ✨")
+			.navigationBarTitle("Sleep Karma ✨")			
 		}
+		.navigationViewStyle(StackNavigationViewStyle())
+	}
+	
+	func delete(at offsets: IndexSet) {
+		userSettings.nights.remove(atOffsets: offsets)
 	}
 }
 

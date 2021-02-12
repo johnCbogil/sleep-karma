@@ -10,6 +10,11 @@ import SwiftUI
 struct DetailView: View {
 	@State private var date = Date()
 	@Environment(\.presentationMode) var presentationMode
+	@ObservedObject var userSettings: UserSettings
+
+	init(userSettings: UserSettings) {
+		self.userSettings = userSettings
+	}
 
 	var body: some View {
 		NavigationView {
@@ -62,6 +67,12 @@ struct DetailView: View {
 				Spacer()
 				
 				Button("Save log") {
+					
+					let newLog = Night(name: "bless123")
+					var oldLogs = userSettings.nights
+					oldLogs.append(newLog)
+					userSettings.nights = oldLogs
+					
 					presentationMode.wrappedValue.dismiss()
 				}
 			}
@@ -70,8 +81,8 @@ struct DetailView: View {
 	}
 }
 
-struct DetailView_Previews: PreviewProvider {
-	static var previews: some View {
-		DetailView()
-	}
-}
+//struct DetailView_Previews: PreviewProvider {
+//	static var previews: some View {
+//		DetailView()
+//	}
+//}
