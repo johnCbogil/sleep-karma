@@ -1,0 +1,8 @@
+app_identifier("com.breadlabs.SleepKarma") # The bundle identifier of your app
+apple_id("johncbogil@gmail.com") # Your Apple email address
+
+itc_team_id("111730868") # App Store Connect Team ID
+team_id("4Y3GGL46D2") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
