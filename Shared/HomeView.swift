@@ -1,5 +1,5 @@
 //
-//  RootView.swift
+//  HomeView.swift
 //  Shared
 //
 //  Created by John Bogil on 2/11/21.
@@ -9,23 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
 	@State private var showingDetail = false
-	@ObservedObject var viewModel = ViewModel()
+	@ObservedObject var viewModel = HomeVM()
 	
 	var body: some View {
 		NavigationView {
 			VStack {
+                Text("Last 7 nights")
+                    .padding()
+
 				Text("\(viewModel.sleepEfficiencyScore)%")
 					.font(.largeTitle)
-				
-				Text("Sleep efficiency for last 7 nights")
-					.padding()
-				
-				Spacer()
-				
+
 				VStack(alignment: .leading) {
-					Text("Sleep Logs")
+					Text("All sleep logs")
 						.font(.title2)
-						.foregroundColor(.primary)
+						.foregroundColor(.white)
 						.padding(10)
 
 					List {
@@ -38,16 +36,20 @@ struct ContentView: View {
 				.background(Color.blue)
 				.padding()
 								
-				Button("Add log") {
+				Button("New Log") {
 					showingDetail.toggle()
 				}
 				.sheet(isPresented: $showingDetail) {
 					DetailView(userSettings: viewModel)
 				}
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
 				
 			}
 			.padding()
-			.navigationBarTitle("Sleep Karma ✨")			
+			.navigationBarTitle("Sleep Efficiency")
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
 	}

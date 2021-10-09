@@ -17,9 +17,9 @@ struct DetailView: View {
 	@State var outOfBedTime = Date()
 	
 	@Environment(\.presentationMode) var presentationMode
-	@ObservedObject var viewModel: ViewModel
+	@ObservedObject var viewModel: HomeVM
 
-	init(userSettings: ViewModel) {
+	init(userSettings: HomeVM) {
 		self.viewModel = userSettings
 	}
 
@@ -106,6 +106,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
 	static var previews: some View {
-		DetailView(userSettings: ViewModel())
+		DetailView(userSettings: HomeVM())
 	}
 }

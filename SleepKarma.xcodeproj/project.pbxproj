@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		7B12DACF25D5B5AC00E1F955 /* SleepKarmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12DABC25D5B5AC00E1F955 /* SleepKarmaApp.swift */; };
 		7B12DAD025D5B5AC00E1F955 /* SleepKarmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12DABC25D5B5AC00E1F955 /* SleepKarmaApp.swift */; };
-		7B12DAD125D5B5AC00E1F955 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12DABD25D5B5AC00E1F955 /* RootView.swift */; };
-		7B12DAD225D5B5AC00E1F955 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12DABD25D5B5AC00E1F955 /* RootView.swift */; };
+		7B12DAD125D5B5AC00E1F955 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12DABD25D5B5AC00E1F955 /* HomeView.swift */; };
+		7B12DAD225D5B5AC00E1F955 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12DABD25D5B5AC00E1F955 /* HomeView.swift */; };
 		7B12DAD325D5B5AC00E1F955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B12DABE25D5B5AC00E1F955 /* Assets.xcassets */; };
 		7B12DAD425D5B5AC00E1F955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B12DABE25D5B5AC00E1F955 /* Assets.xcassets */; };
 		7B1D41AF25D5D06F00D5A79E /* Night.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D41AE25D5D06F00D5A79E /* Night.swift */; };
@@ -23,15 +23,15 @@
 		7B4C7DD825D74B5800B4F554 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4C7DD625D74B5800B4F554 /* GoogleService-Info.plist */; };
 		7B4C7DDD25D74BFA00B4F554 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B4C7DDC25D74BFA00B4F554 /* FirebaseAnalytics */; };
 		7B4C7DDF25D74BFA00B4F554 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B4C7DDE25D74BFA00B4F554 /* FirebaseCrashlytics */; };
-		7B83334E25D637D400C30FDC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* ViewModel.swift */; };
-		7B83334F25D637D400C30FDC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* ViewModel.swift */; };
+		7B83334E25D637D400C30FDC /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* HomeVM.swift */; };
+		7B83334F25D637D400C30FDC /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* HomeVM.swift */; };
 		7BC61C9D25D5C3DE0084CD09 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC61C9C25D5C3DE0084CD09 /* DetailView.swift */; };
 		7BC61C9E25D5C3DE0084CD09 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC61C9C25D5C3DE0084CD09 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B12DABC25D5B5AC00E1F955 /* SleepKarmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepKarmaApp.swift; sourceTree = "<group>"; };
-		7B12DABD25D5B5AC00E1F955 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		7B12DABD25D5B5AC00E1F955 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7B12DABE25D5B5AC00E1F955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B12DAC325D5B5AC00E1F955 /* SleepKarma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepKarma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B12DAC625D5B5AC00E1F955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		7B1D41B325D5D10900D5A79E /* NightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightRow.swift; sourceTree = "<group>"; };
 		7B4C7DCB25D70E2B00B4F554 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		7B4C7DD625D74B5800B4F554 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7B83334D25D637D300C30FDC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7B83334D25D637D300C30FDC /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		7BC61C9C25D5C3DE0084CD09 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,12 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				7B12DABC25D5B5AC00E1F955 /* SleepKarmaApp.swift */,
-				7B12DABD25D5B5AC00E1F955 /* RootView.swift */,
+				7B12DABD25D5B5AC00E1F955 /* HomeView.swift */,
 				7BC61C9C25D5C3DE0084CD09 /* DetailView.swift */,
 				7B1D41B325D5D10900D5A79E /* NightRow.swift */,
-				7B1D41AE25D5D06F00D5A79E /* Night.swift */,
-				7B83334D25D637D300C30FDC /* ViewModel.swift */,
-				7B4C7DCB25D70E2B00B4F554 /* Date+.swift */,
+				7B83334D25D637D300C30FDC /* HomeVM.swift */,
+				7BE57189271206C100F8D5CA /* Model */,
+				7BE5718A271206C800F8D5CA /* Extensions */,
 				7B12DABE25D5B5AC00E1F955 /* Assets.xcassets */,
 				7B4C7DD625D74B5800B4F554 /* GoogleService-Info.plist */,
 			);
@@ -116,6 +116,22 @@
 				7B12DACE25D5B5AC00E1F955 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		7BE57189271206C100F8D5CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B1D41AE25D5D06F00D5A79E /* Night.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7BE5718A271206C800F8D5CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B4C7DCB25D70E2B00B4F554 /* Date+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,8 +242,8 @@
 			files = (
 				7B4C7DCC25D70E2B00B4F554 /* Date+.swift in Sources */,
 				7B1D41AF25D5D06F00D5A79E /* Night.swift in Sources */,
-				7B83334E25D637D400C30FDC /* ViewModel.swift in Sources */,
-				7B12DAD125D5B5AC00E1F955 /* RootView.swift in Sources */,
+				7B83334E25D637D400C30FDC /* HomeVM.swift in Sources */,
+				7B12DAD125D5B5AC00E1F955 /* HomeView.swift in Sources */,
 				7BC61C9D25D5C3DE0084CD09 /* DetailView.swift in Sources */,
 				7B12DACF25D5B5AC00E1F955 /* SleepKarmaApp.swift in Sources */,
 				7B1D41B425D5D10900D5A79E /* NightRow.swift in Sources */,
@@ -240,8 +256,8 @@
 			files = (
 				7B4C7DCD25D70E2B00B4F554 /* Date+.swift in Sources */,
 				7B1D41B025D5D06F00D5A79E /* Night.swift in Sources */,
-				7B83334F25D637D400C30FDC /* ViewModel.swift in Sources */,
-				7B12DAD225D5B5AC00E1F955 /* RootView.swift in Sources */,
+				7B83334F25D637D400C30FDC /* HomeVM.swift in Sources */,
+				7B12DAD225D5B5AC00E1F955 /* HomeView.swift in Sources */,
 				7BC61C9E25D5C3DE0084CD09 /* DetailView.swift in Sources */,
 				7B12DAD025D5B5AC00E1F955 /* SleepKarmaApp.swift in Sources */,
 				7B1D41B525D5D10900D5A79E /* NightRow.swift in Sources */,

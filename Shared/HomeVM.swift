@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ViewModel: ObservableObject {
+class HomeVM: ObservableObject {
 	private let encoder = JSONEncoder()
 	private let decoder = JSONDecoder()
 	
