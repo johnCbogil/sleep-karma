@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  NewLogView.swift
 //  SleepKarma
 //
 //  Created by John Bogil on 2/11/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct NewLogView: View {
 	@State var targetSleepTime = Date()
 	@State var targetWakeUpTime = Date()
 	@State var bedTime = Date()
@@ -26,7 +26,6 @@ struct DetailView: View {
 	var body: some View {
 		NavigationView {
 			VStack {
-				Spacer()
 
 				DatePicker(
 					"Target sleep time",
@@ -83,8 +82,12 @@ struct DetailView: View {
 						
 					presentationMode.wrappedValue.dismiss()
 				}
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
 			}
-			.navigationBarTitle("Add new log 📖")
+			.navigationBarTitle("📖 Add new log")
 		}
 	}
 	
@@ -106,6 +109,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
 	static var previews: some View {
-		DetailView(userSettings: HomeVM())
+		NewLogView(userSettings: HomeVM())
 	}
 }
