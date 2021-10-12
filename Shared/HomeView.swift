@@ -46,7 +46,7 @@ struct ContentView: View {
                     showingDetail.toggle()
                 }
                 .sheet(isPresented: $showingDetail) {
-                    NewLogView(userSettings: viewModel)
+                    LogDetailView(state: .create)
                 }
                 .padding()
                 .background(Color.blue)

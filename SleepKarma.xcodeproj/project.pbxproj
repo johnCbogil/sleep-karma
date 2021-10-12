@@ -23,10 +23,14 @@
 		7B4C7DD825D74B5800B4F554 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B4C7DD625D74B5800B4F554 /* GoogleService-Info.plist */; };
 		7B4C7DDD25D74BFA00B4F554 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B4C7DDC25D74BFA00B4F554 /* FirebaseAnalytics */; };
 		7B4C7DDF25D74BFA00B4F554 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7B4C7DDE25D74BFA00B4F554 /* FirebaseCrashlytics */; };
-		7B83334E25D637D400C30FDC /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* HomeVM.swift */; };
-		7B83334F25D637D400C30FDC /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* HomeVM.swift */; };
-		7BC61C9D25D5C3DE0084CD09 /* NewLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC61C9C25D5C3DE0084CD09 /* NewLogView.swift */; };
-		7BC61C9E25D5C3DE0084CD09 /* NewLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC61C9C25D5C3DE0084CD09 /* NewLogView.swift */; };
+		7B83334E25D637D400C30FDC /* LogDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* LogDetailVM.swift */; };
+		7B83334F25D637D400C30FDC /* LogDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B83334D25D637D300C30FDC /* LogDetailVM.swift */; };
+		7BC61C9D25D5C3DE0084CD09 /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC61C9C25D5C3DE0084CD09 /* LogDetailView.swift */; };
+		7BC61C9E25D5C3DE0084CD09 /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC61C9C25D5C3DE0084CD09 /* LogDetailView.swift */; };
+		7BE4301027133FF200E32CF8 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE4300F27133FF200E32CF8 /* HomeVM.swift */; };
+		7BE4301127133FF200E32CF8 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE4300F27133FF200E32CF8 /* HomeVM.swift */; };
+		7BE43013271340EA00E32CF8 /* DatabaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE43012271340EA00E32CF8 /* DatabaseInterface.swift */; };
+		7BE43014271340EA00E32CF8 /* DatabaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE43012271340EA00E32CF8 /* DatabaseInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +46,10 @@
 		7B1D41B325D5D10900D5A79E /* NightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightRow.swift; sourceTree = "<group>"; };
 		7B4C7DCB25D70E2B00B4F554 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		7B4C7DD625D74B5800B4F554 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7B83334D25D637D300C30FDC /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
-		7BC61C9C25D5C3DE0084CD09 /* NewLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLogView.swift; sourceTree = "<group>"; };
+		7B83334D25D637D300C30FDC /* LogDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailVM.swift; sourceTree = "<group>"; };
+		7BC61C9C25D5C3DE0084CD09 /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
+		7BE4300F27133FF200E32CF8 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		7BE43012271340EA00E32CF8 /* DatabaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +87,11 @@
 			children = (
 				7B12DABC25D5B5AC00E1F955 /* SleepKarmaApp.swift */,
 				7B12DABD25D5B5AC00E1F955 /* HomeView.swift */,
-				7BC61C9C25D5C3DE0084CD09 /* NewLogView.swift */,
+				7BE4300F27133FF200E32CF8 /* HomeVM.swift */,
+				7BC61C9C25D5C3DE0084CD09 /* LogDetailView.swift */,
+				7B83334D25D637D300C30FDC /* LogDetailVM.swift */,
 				7B1D41B325D5D10900D5A79E /* NightRow.swift */,
-				7B83334D25D637D300C30FDC /* HomeVM.swift */,
+				7BE43012271340EA00E32CF8 /* DatabaseInterface.swift */,
 				7BE57189271206C100F8D5CA /* Model */,
 				7BE5718A271206C800F8D5CA /* Extensions */,
 				7B12DABE25D5B5AC00E1F955 /* Assets.xcassets */,
@@ -242,9 +250,11 @@
 			files = (
 				7B4C7DCC25D70E2B00B4F554 /* Date+.swift in Sources */,
 				7B1D41AF25D5D06F00D5A79E /* Night.swift in Sources */,
-				7B83334E25D637D400C30FDC /* HomeVM.swift in Sources */,
+				7B83334E25D637D400C30FDC /* LogDetailVM.swift in Sources */,
+				7BE43013271340EA00E32CF8 /* DatabaseInterface.swift in Sources */,
+				7BE4301027133FF200E32CF8 /* HomeVM.swift in Sources */,
 				7B12DAD125D5B5AC00E1F955 /* HomeView.swift in Sources */,
-				7BC61C9D25D5C3DE0084CD09 /* NewLogView.swift in Sources */,
+				7BC61C9D25D5C3DE0084CD09 /* LogDetailView.swift in Sources */,
 				7B12DACF25D5B5AC00E1F955 /* SleepKarmaApp.swift in Sources */,
 				7B1D41B425D5D10900D5A79E /* NightRow.swift in Sources */,
 			);
@@ -256,9 +266,11 @@
 			files = (
 				7B4C7DCD25D70E2B00B4F554 /* Date+.swift in Sources */,
 				7B1D41B025D5D06F00D5A79E /* Night.swift in Sources */,
-				7B83334F25D637D400C30FDC /* HomeVM.swift in Sources */,
+				7B83334F25D637D400C30FDC /* LogDetailVM.swift in Sources */,
+				7BE43014271340EA00E32CF8 /* DatabaseInterface.swift in Sources */,
+				7BE4301127133FF200E32CF8 /* HomeVM.swift in Sources */,
 				7B12DAD225D5B5AC00E1F955 /* HomeView.swift in Sources */,
-				7BC61C9E25D5C3DE0084CD09 /* NewLogView.swift in Sources */,
+				7BC61C9E25D5C3DE0084CD09 /* LogDetailView.swift in Sources */,
 				7B12DAD025D5B5AC00E1F955 /* SleepKarmaApp.swift in Sources */,
 				7B1D41B525D5D10900D5A79E /* NightRow.swift in Sources */,
 			);

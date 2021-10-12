@@ -8,6 +8,7 @@
 import Foundation
 
 struct Night: Codable, Hashable {
+    var identifier = Date().timeIntervalSince1970
 	let targetSleepTime: Date
 	let targetWakeUpTime: Date
 	let bedTime: Date
